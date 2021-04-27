@@ -1,7 +1,8 @@
-import consumer from "./consumer"
+import consumer from "./consumer";
 
 consumer.subscriptions.create("RoomChannel", {
   connected() {
+    console.log("Connected to room channel...");
     // Called when the subscription is ready for use on the server
   },
 
@@ -11,5 +12,5 @@ consumer.subscriptions.create("RoomChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
-  }
+  },
 });
